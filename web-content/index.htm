@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>Simple Media Player Remote</title>
+    <script type="text/javascript">
+        function sendCmd(cmd) {
+            var req = new XMLHttpRequest();
+            req.open('GET', '/?'+cmd);
+            req.send();
+        }
+    </script>
+    </head>
+    <body style="text-align:center">
+        <a href="javascript:sendCmd('play')"><img src="images/media-playback-start.png" alt="Play"></a>
+        <a href="javascript:sendCmd('pause')"><img src="images/media-playback-pause.png" alt="Pause"></a>
+        <a href="javascript:sendCmd('previous_track')"><img src="images/media-skip-backward.png" alt="Previous"></a>
+        <a href="javascript:sendCmd('stop')"><img src="images/media-playback-stop.png" alt="Stop"></a>
+        <a href="javascript:sendCmd('next_track')"><img src="images/media-skip-forward.png" alt="Next"></a>
+    </body>
+</html>
